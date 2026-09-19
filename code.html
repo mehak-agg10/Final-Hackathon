@@ -1,347 +1,889 @@
-<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf7ff;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
-  darkMode: 'class',
-  theme: {
-    extend: {
-      colors: {
-        'secondary-container': '#b8eeda',
-        'secondary-fixed': '#b8eeda',
-        'background': '#fbf7ff',
-        'secondary': '#2e6b5a',
-        'surface-container': '#f5eafd',
-        'on-secondary-fixed-variant': '#13473b',
-        'on-tertiary-fixed-variant': '#6f3441',
-        'surface-container-high': '#f0e6f9',
-        'on-secondary-container': '#265446',
-        'inverse-on-surface': '#f8edff',
-        'surface': '#fbf7ff',
-        'surface-dim': '#e1d6e9',
-        'on-primary-fixed-variant': '#4d3b7e',
-        'outline-variant': '#e5deee',
-        'on-primary-fixed': '#210a50',
-        'inverse-surface': '#342e3c',
-        'on-background': '#1f1926',
-        'tertiary-fixed': '#ffe0e4',
-        'tertiary-container': '#a35f6d',
-        'on-primary-container': '#fef8ff',
-        'on-tertiary': '#ffffff',
-        'primary': '#624f93',
-        'primary-fixed-dim': '#cfbcff',
-        'on-tertiary-container': '#fff8f8',
-        'surface-container-lowest': '#ffffff',
-        'error': '#ba1a1a',
-        'surface-container-low': '#faf0ff',
-        'outline': '#7a7581',
-        'on-tertiary-fixed': '#40111e',
-        'inverse-primary': '#cfbcff',
-        'surface-bright': '#fef7ff',
-        'surface-container-highest': '#e9dff2',
-        'on-secondary': '#ffffff',
-        'tertiary-fixed-dim': '#ffb2bf',
-        'primary-fixed': '#ede3ff',
-        'on-error': '#ffffff',
-        'surface-variant': '#eee4f5',
-        'on-error-container': '#93000a',
-        'error-container': '#ffdad6',
-        'tertiary': '#a24b5d',
-        'secondary-fixed-dim': '#9cd1be',
-        'on-secondary-fixed': '#002018',
-        'on-primary': '#ffffff',
-        'primary-container': '#7b68ae',
-        'on-surface-variant': '#595363',
-        'on-surface': '#201a27',
-        'surface-tint': '#665397'
-      },
-      borderRadius: {
-        'DEFAULT': '0.375rem',
-        'lg': '0.625rem',
-        'xl': '1rem',
-        '2xl': '1.25rem',
-        '3xl': '1.75rem',
-        'full': '9999px'
-      },
-      spacing: {
-        'gutter': '1rem',
-        'space-xs': '0.25rem',
-        'space-sm': '0.5rem',
-        'space-md': '1rem',
-        'space-lg': '1.5rem',
-        'space-xl': '2rem'
-      },
-      fontFamily: {
-        'headline-lg': ['Plus Jakarta Sans', 'sans-serif'],
-        'headline-md': ['Plus Jakarta Sans', 'sans-serif'],
-        'headline-sm': ['Plus Jakarta Sans', 'sans-serif'],
-        'headline-lg-mobile': ['Plus Jakarta Sans', 'sans-serif'],
-        'body-lg': ['Plus Jakarta Sans', 'sans-serif'],
-        'body-md': ['Plus Jakarta Sans', 'sans-serif'],
-        'body-sm': ['Plus Jakarta Sans', 'sans-serif'],
-        'label-lg': ['Inter', 'sans-serif'],
-        'label-md': ['Inter', 'sans-serif'],
-        'label-sm': ['Inter', 'sans-serif']
+<!DOCTYPE html>
+<html lang="en" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    name="viewport">
+  <meta content="mobile_tab" name="shell-type">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #fbf7ff;
       }
-    }
-  }
-};</script></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl border-b border-surface-container-high/60 shadow-[0_2px_12px_rgba(98,79,147,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="BloomTeen Health Logo" class="h-9 w-auto object-contain flex-shrink-0 drop-shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1W6Jhu7-lToboyD7O3wpIiLf4M2dnHCaQkA8TP6l8aULBSR6RuOaUqW7eEG9GdsOPIYzuPZMG2KK3GkjPZVvRV9_q4pWIZaKdxQb6rtKqf1p2D4hDxYv4UM144XBDzajmGyzT187FbEjBwdjbfY5Kf5vlUR2X4AbCETsPvkTqtSi3_axocxsnOUd0We2_8yljPdkdaZG4BI76BhmFGBclsvR07cFUFR8u0gNmVUHua431Mf1E5J1NXWwQ"><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-headline-sm font-bold text-headline-sm text-on-surface truncate tracking-tight">BloomTeen</span><span class="text-xs px-2 py-0.5 rounded-full font-semibold bg-secondary-fixed text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>PCOS &amp; PCOD Portal</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Adolescent Hormone &amp; Diagnostic Registry</span></div></div><div class="flex items-center gap-2 flex-shrink-0"><button aria-label="Support &amp; Resources" class="w-10 h-10 flex items-center justify-center rounded-full text-primary bg-primary-fixed/40 hover:bg-primary-fixed active:scale-95 transition-all" type="button"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-9 h-9 rounded-full bg-gradient-to-tr from-primary to-primary-container p-0.5 shadow-sm"><div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">spa</span></div></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter pb-space-xl gap-4"><div class="mt-3 bg-secondary-fixed/30 border border-secondary-fixed text-secondary px-3 py-2 rounded-xl flex items-center gap-2 text-xs"><span class="material-symbols-outlined text-[18px] text-secondary flex-shrink-0">lock</span><div class="flex-1 min-w-0 leading-tight"><span class="font-bold">Doctor &amp; Care Team View</span> • HIPAA &amp; COPPA Compliant Patient Records (Teens &amp; guardians consented for clinical PCOS/PCOD evaluation).</div></div>
-<!-- Friendly Welcome Hero Banner -->
-<section class="mt-3 bg-gradient-to-br from-primary-fixed/70 via-surface-container to-secondary-fixed/40 p-4 rounded-2xl border border-primary-fixed shadow-sm flex flex-col gap-3 relative overflow-hidden"><div class="absolute -right-5 -bottom-6 text-primary/10 select-none pointer-events-none"><span class="material-symbols-outlined text-[100px]">filter_vintage</span></div><div class="flex items-start justify-between relative z-10"><div class="flex flex-col"><div class="flex items-center gap-1.5 mb-1 flex-wrap"><span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary flex items-center gap-1 shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Clinician Space</span><span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-secondary-fixed text-secondary">Teal PCOS Cohort</span><span class="text-xs text-on-surface-variant">Bloom Hub</span></div><h1 class="font-headline-md text-xl sm:text-2xl font-bold text-on-surface">Adolescent PCOS &amp; PCOD Clinical Tracker</h1><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Managing <strong class="text-primary font-semibold">28 teen patients</strong> under modified adolescent Rotterdam diagnostic guidelines</p></div><div class="w-11 h-11 rounded-2xl bg-surface-container-lowest/90 text-secondary flex items-center justify-center shadow-sm flex-shrink-0"><span class="material-symbols-outlined text-[24px]">medical_services</span></div></div><div class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-surface-container-lowest/90 backdrop-blur-sm px-3.5 py-2.5 rounded-xl text-xs relative z-10 border border-secondary-fixed/60 gap-1.5"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[18px]">verified</span><span class="font-medium text-on-surface">84% follow-ups completed on time • Labs &amp; ultrasound logs up-to-date</span></div><span class="font-semibold text-secondary bg-secondary-fixed/60 px-2 py-0.5 rounded-md self-start sm:self-auto">PCOS Awareness Rhythm ✨</span></div></section>
-<!-- Youthful Summary Cards Bento -->
-<section class="grid grid-cols-3 gap-2.5"><div class="bg-surface-container-lowest p-3 rounded-2xl shadow-xs border border-tertiary-fixed flex flex-col justify-between gap-1.5 relative overflow-hidden"><div class="flex items-center justify-between"><span class="text-[11px] font-semibold text-tertiary uppercase tracking-wider">High Risk</span><span class="w-2 h-2 rounded-full bg-tertiary"></span></div><div><div class="font-headline-md text-2xl font-bold text-on-surface leading-none">9</div><span class="text-[11px] text-tertiary font-medium mt-0.5 block">PCOS / PCOD ≥5/6</span></div><div class="w-full h-1.5 bg-tertiary-fixed rounded-full overflow-hidden"><div class="h-full bg-tertiary rounded-full" style="width: 32%"></div></div></div><div class="bg-surface-container-lowest p-3 rounded-2xl shadow-xs border border-primary-fixed flex flex-col justify-between gap-1.5 relative overflow-hidden"><div class="flex items-center justify-between"><span class="text-[11px] font-semibold text-primary uppercase tracking-wider">Moderate</span><span class="w-2 h-2 rounded-full bg-primary-container"></span></div><div><div class="font-headline-md text-2xl font-bold text-on-surface leading-none">12</div><span class="text-[11px] text-on-surface-variant font-medium mt-0.5 block">Monitoring 3-4/6</span></div><div class="w-full h-1.5 bg-primary-fixed rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full" style="width: 43%"></div></div></div><div class="bg-surface-container-lowest p-3 rounded-2xl shadow-xs border border-secondary-fixed flex flex-col justify-between gap-1.5 relative overflow-hidden"><div class="flex items-center justify-between"><span class="text-[11px] font-semibold text-secondary uppercase tracking-wider">Low / Mild</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div><div><div class="font-headline-md text-2xl font-bold text-on-surface leading-none">7</div><span class="text-[11px] text-secondary font-medium mt-0.5 block">Balanced ≤2/6</span></div><div class="w-full h-1.5 bg-secondary-fixed rounded-full overflow-hidden"><div class="h-full bg-secondary rounded-full" style="width: 25%"></div></div></div></section>
-<!-- Search & Filter Controls -->
-<section class="flex flex-col gap-2 pt-1">
-<!-- Search Field with Friendly UX -->
-<div class="relative flex items-center">
-<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant/70 text-[20px]">search</span>
-<input class="w-full h-12 pl-10 pr-10 rounded-2xl bg-surface-container-lowest text-on-surface font-body-md text-body-sm placeholder:text-on-surface-variant/70 shadow-xs border border-outline-variant/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all" id="patient-search" placeholder="Search teen name, PCOS signs (amenorrhea, hirsutism, acne)... 🔍" type="text">
-<button aria-label="Clear Search" class="hidden absolute right-3 text-on-surface-variant hover:text-on-surface" id="clear-search" type="button">
-<span class="material-symbols-outlined text-[18px]">cancel</span>
-</button>
-</div>
-<!-- Horizontal Filter Chips -->
-<div class="flex items-center gap-2 overflow-x-auto py-1 scrollbar-none" id="filter-chips">
-<button class="filter-chip active flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-xs font-semibold bg-primary text-on-primary shadow-xs transition-all" data-filter="all" type="button">
-        All Teens (28)
-      </button>
-<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-xs font-medium bg-surface-container-lowest text-tertiary border border-tertiary-fixed hover:bg-tertiary-fixed/30 transition-all" data-filter="high" type="button">
-        Needs Care (9)
-      </button>
-<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-xs font-medium bg-surface-container-lowest text-primary border border-primary-fixed hover:bg-primary-fixed/30 transition-all" data-filter="moderate" type="button">
-        Monitoring (12)
-      </button>
-<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-xs font-medium bg-surface-container-lowest text-secondary border border-secondary-fixed hover:bg-secondary-fixed/30 transition-all" data-filter="low" type="button">
-        Thriving (7)
-      </button>
-</div>
-</section>
-<!-- Teen Empowerment Educational Card -->
-<section class="bg-gradient-to-r from-pink-50 via-purple-50 to-indigo-50 border border-pink-200/70 p-3.5 rounded-2xl flex items-center gap-3 shadow-xs"><div class="w-10 h-10 rounded-2xl bg-white text-secondary flex items-center justify-center flex-shrink-0 shadow-xs border border-secondary-fixed"><span class="text-xl select-none">🎗️</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 flex-wrap"><span class="font-label-md text-xs font-bold text-on-surface">Adolescent PCOS/PCOD Diagnostic Protocol</span><span class="text-[10px] bg-secondary-fixed text-secondary font-semibold px-1.5 py-0.2 rounded-md">Rotterdam Consensus</span></div><p class="text-xs text-on-surface-variant leading-relaxed mt-0.5">Diagnosis in adolescents requires persistent ovulatory dysfunction (&gt;2 yrs post-menarche) AND clinical or biochemical hyperandrogenism. Gentle, supportive communication prevents distress.</p></div></section>
-<!-- Patient Cards Section -->
-<section class="flex flex-col gap-3" id="patient-list">
-<!-- Patient 1: Ananya Patel (High Risk -> Priority Care Needed) -->
-<article class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-tertiary/40" data-name="ananya patel irregular acne hirsutism" data-risk="high"><div class="flex items-start justify-between gap-2"><div class="flex items-center gap-3 min-w-0"><div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-pink-200 to-rose-100 text-tertiary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">AP</div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 flex-wrap"><h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Ananya Patel</h2><span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant flex-shrink-0">Age 17</span></div><span class="text-xs text-on-surface-variant/80 truncate">Assessed Today • 09:40 AM</span></div></div><div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-rose-50 text-tertiary border border-rose-200/70 flex-shrink-0 shadow-xs"><span class="material-symbols-outlined text-[14px]">warning</span><span class="text-xs font-semibold whitespace-nowrap">High PCOS Risk (5/6)</span></div></div><div class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high"><div class="flex justify-between items-center text-xs"><span class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span><span class="font-semibold text-tertiary">5 of 6 signs reported</span></div><div class="grid grid-cols-6 gap-1"><div class="h-1.5 rounded-full bg-tertiary"></div><div class="h-1.5 rounded-full bg-tertiary"></div><div class="h-1.5 rounded-full bg-tertiary"></div><div class="h-1.5 rounded-full bg-tertiary"></div><div class="h-1.5 rounded-full bg-tertiary"></div><div class="h-1.5 rounded-full bg-surface-container-highest"></div></div><div class="flex flex-wrap gap-1.5 mt-1"><span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">✨ Cycle irregularity</span><span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌿 Hormonal acne</span><span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌸 Hirsutism</span></div></div><div class="bg-rose-50/70 border border-rose-200/70 rounded-xl p-2.5 flex items-start gap-2 text-xs"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5 flex-shrink-0">medical_services</span><div class="flex-1 min-w-0"><span class="font-bold text-tertiary block">Next Steps &amp; Guidance:</span><p class="text-on-surface-variant leading-relaxed">Pediatric endocrine lab work &amp; pelvic ultrasound evaluation. Discuss gentle cycle regulation.</p></div></div><div class="flex items-center justify-between pt-0.5"><p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">Pediatric endocrinology review recommended</p><div class="flex items-center gap-1.5 flex-shrink-0"><button class="px-3 py-1 rounded-full bg-primary-fixed/50 hover:bg-primary-fixed text-primary text-xs font-semibold flex items-center gap-1 transition-all" type="button">View Plan 💬</button><button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all" title="Send Gentle Nudge" type="button"><span class="text-sm">💌</span></button></div></div></article>
-<!-- Patient 2: Chloe Bennett (Low Risk -> Healthy & Balanced) -->
-<article class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-secondary/40" data-name="chloe bennett mild acne regular" data-risk="low"><div class="flex items-start justify-between gap-2"><div class="flex items-center gap-3 min-w-0"><div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-100 to-teal-200 text-secondary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">CB</div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 flex-wrap"><h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Chloe Bennett</h2><span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant flex-shrink-0">Age 15</span></div><span class="text-xs text-on-surface-variant/80 truncate">Assessed Today • 11:15 AM</span></div></div><div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-secondary border border-emerald-200/70 flex-shrink-0 shadow-xs"><span class="material-symbols-outlined text-[14px]">check_circle</span><span class="text-xs font-semibold whitespace-nowrap">Low PCOS Risk (2/6)</span></div></div><div class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high"><div class="flex justify-between items-center text-xs"><span class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span><span class="font-semibold text-secondary">2 of 6 signs reported</span></div><div class="grid grid-cols-6 gap-1"><div class="h-1.5 rounded-full bg-secondary"></div><div class="h-1.5 rounded-full bg-secondary"></div><div class="h-1.5 rounded-full bg-surface-container-highest"></div><div class="h-1.5 rounded-full bg-surface-container-highest"></div><div class="h-1.5 rounded-full bg-surface-container-highest"></div><div class="h-1.5 rounded-full bg-surface-container-highest"></div></div><div class="flex flex-wrap gap-1.5 mt-1"><span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌿 Mild skin changes</span><span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-secondary font-medium">✨ Routine regular cycle</span></div></div><div class="bg-emerald-50/70 border border-emerald-200/70 rounded-xl p-2.5 flex items-start gap-2 text-xs"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5 flex-shrink-0">spa</span><div class="flex-1 min-w-0"><span class="font-bold text-secondary block">Next Steps &amp; Guidance:</span><p class="text-on-surface-variant leading-relaxed">Routine annual check &amp; reassure about normal pubertal cycle variation. Continue cycle log.</p></div></div><div class="flex items-center justify-between pt-0.5"><p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">Stable profile. Reassure teen on natural pubertal shifts.</p><div class="flex items-center gap-1.5 flex-shrink-0"><button class="px-3 py-1 rounded-full bg-secondary-fixed/60 hover:bg-secondary-fixed text-secondary text-xs font-semibold flex items-center gap-1 transition-all" type="button">View Plan 💬</button><button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all" title="Send Gentle Nudge" type="button"><span class="text-sm">💌</span></button></div></div></article>
-<!-- Patient 3: Sofia Ramirez (Moderate Risk -> Gentle Monitoring) -->
-<article class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-primary/40" data-name="sofia ramirez weight changes dark patches skipped" data-risk="moderate"><div class="flex items-start justify-between gap-2"><div class="flex items-center gap-3 min-w-0"><div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-200 to-indigo-100 text-primary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">SR</div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 flex-wrap"><h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Sofia Ramirez</h2><span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant flex-shrink-0">Age 18</span></div><span class="text-xs text-on-surface-variant/80 truncate">Assessed Yesterday • 04:20 PM</span></div></div><div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-purple-50 text-primary border border-purple-200/70 flex-shrink-0 shadow-xs"><span class="material-symbols-outlined text-[14px]">visibility</span><span class="text-xs font-semibold whitespace-nowrap">PCOS Monitoring (4/6)</span></div></div><div class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high"><div class="flex justify-between items-center text-xs"><span class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span><span class="font-semibold text-primary">4 of 6 signs reported</span></div><div class="grid grid-cols-6 gap-1"><div class="h-1.5 rounded-full bg-primary-container"></div><div class="h-1.5 rounded-full bg-primary-container"></div><div class="h-1.5 rounded-full bg-primary-container"></div><div class="h-1.5 rounded-full bg-primary-container"></div><div class="h-1.5 rounded-full bg-surface-container-highest"></div><div class="h-1.5 rounded-full bg-surface-container-highest"></div></div><div class="flex flex-wrap gap-1.5 mt-1"><span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">✨ Acanthosis nigricans</span><span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌸 Skipped cycles</span></div></div><div class="bg-purple-50/70 border border-purple-200/70 rounded-xl p-2.5 flex items-start gap-2 text-xs"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5 flex-shrink-0">calendar_month</span><div class="flex-1 min-w-0"><span class="font-bold text-primary block">Next Steps &amp; Guidance:</span><p class="text-on-surface-variant leading-relaxed">3-month cycle tracking &amp; dietary insulin management check-in. Gentle lifestyle support.</p></div></div><div class="flex items-center justify-between pt-0.5"><p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">Nutritional counseling &amp; routine insulin checkup</p><div class="flex items-center gap-1.5 flex-shrink-0"><button class="px-3 py-1 rounded-full bg-primary-fixed/50 hover:bg-primary-fixed text-primary text-xs font-semibold flex items-center gap-1 transition-all" type="button">View Plan 💬</button><button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all" title="Send Gentle Nudge" type="button"><span class="text-sm">💌</span></button></div></div></article>
-<!-- Patient 4: Zara Khan (High Risk -> Priority Care Needed) -->
-<article class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-tertiary/40" data-name="zara khan amenorrhea hirsutism cystic acne" data-risk="high"><div class="flex items-start justify-between gap-2"><div class="flex items-center gap-3 min-w-0"><div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-100 to-pink-200 text-tertiary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">ZK</div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 flex-wrap"><h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Zara Khan</h2><span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant flex-shrink-0">Age 16</span></div><span class="text-xs text-on-surface-variant/80 truncate">Assessed Oct 14</span></div></div><div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-rose-50 text-tertiary border border-rose-200/70 flex-shrink-0 shadow-xs"><span class="material-symbols-outlined text-[14px]">favorite</span><span class="text-xs font-semibold whitespace-nowrap">Priority Care Needed</span></div></div><div class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high"><div class="flex justify-between items-center text-xs"><span class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span><span class="font-semibold text-tertiary">6 of 6 signs reported</span></div><div class="grid grid-cols-6 gap-1"><div class="h-1.5 rounded-full bg-tertiary"></div><div class="h-1.5 rounded-full bg-tertiary"></div><div class="h-1.5 rounded-full bg-tertiary"></div><div class="h-1.5 rounded-full bg-tertiary"></div><div class="h-1.5 rounded-full bg-tertiary"></div><div class="h-1.5 rounded-full bg-tertiary"></div></div><div class="flex flex-wrap gap-1.5 mt-1"><span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">✨ Primary amenorrhea</span><span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌿 Severe hirsutism</span></div></div><div class="bg-rose-50/70 border border-rose-200/70 rounded-xl p-2.5 flex items-start gap-2 text-xs"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5 flex-shrink-0">medical_services</span><div class="flex-1 min-w-0"><span class="font-bold text-tertiary block">Next Steps &amp; Guidance:</span><p class="text-on-surface-variant leading-relaxed">Pediatric gynecologist referral &amp; complete hormone panel. Empathetic adolescent counseling.</p></div></div><div class="flex items-center justify-between pt-0.5"><p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">Pediatric gynecologist referral and labs scheduled</p><div class="flex items-center gap-1.5 flex-shrink-0"><button class="px-3 py-1 rounded-full bg-primary-fixed/50 hover:bg-primary-fixed text-primary text-xs font-semibold flex items-center gap-1 transition-all" type="button">View Plan 💬</button><button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all" title="Send Gentle Nudge" type="button"><span class="text-sm">💌</span></button></div></div></article>
-<!-- Patient 5: Emma Watson (Moderate Risk -> Gentle Monitoring) -->
-<article class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-primary/40" data-name="emma watson scalp thinning sudden weight changes" data-risk="moderate">
-<div class="flex items-start justify-between gap-3">
-<div class="flex items-center gap-3 min-w-0">
-<!-- Fun Teen Pastel Avatar -->
-<div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-100 to-indigo-100 text-primary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">
-            EW
-          </div>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center gap-1.5">
-<h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Emma Watson</h2>
-<span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Age 14</span>
-</div>
-<span class="text-xs text-on-surface-variant/80">Assessed Oct 12</span>
-</div>
-</div>
-<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-purple-50 text-primary border border-purple-200/70 flex-shrink-0 shadow-xs">
-<span class="material-symbols-outlined text-[14px]">visibility</span>
-<span class="text-xs font-semibold">Gentle Monitoring</span>
-</div>
-</div>
-<div class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high">
-<div class="flex justify-between items-center text-xs">
-<span class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span>
-<span class="font-semibold text-primary">3 of 6 signs reported</span>
-</div>
-<div class="grid grid-cols-6 gap-1">
-<div class="h-1.5 rounded-full bg-primary-container"></div>
-<div class="h-1.5 rounded-full bg-primary-container"></div>
-<div class="h-1.5 rounded-full bg-primary-container"></div>
-<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
-<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
-<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
-</div>
-<div class="flex flex-wrap gap-1.5 mt-1">
-<span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">✨ Hair thinning</span>
-<span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌿 Mild fatigue</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-0.5">
-<p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">
-          3-month wellness journal &amp; sleep hygiene check
-        </p>
-<div class="flex items-center gap-1.5 flex-shrink-0">
-<button class="px-3 py-1 rounded-full bg-primary-fixed/50 hover:bg-primary-fixed text-primary text-xs font-semibold flex items-center gap-1 transition-all" type="button">
-            View Plan 💬
-          </button>
-<button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all" title="Send Gentle Nudge" type="button">
-<span class="text-sm">💌</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Patient 6: Mia Takahashi (Low Risk -> Healthy & Balanced) -->
-<article class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-secondary/40" data-name="mia takahashi occasional irregular menarche" data-risk="low">
-<div class="flex items-start justify-between gap-3">
-<div class="flex items-center gap-3 min-w-0">
-<!-- Fun Teen Pastel Avatar -->
-<div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-teal-100 to-emerald-200 text-secondary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">
-            MT
-          </div>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center gap-1.5">
-<h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Mia Takahashi</h2>
-<span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Age 16</span>
-</div>
-<span class="text-xs text-on-surface-variant/80">Assessed Oct 08</span>
-</div>
-</div>
-<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-secondary border border-emerald-200/70 flex-shrink-0 shadow-xs">
-<span class="material-symbols-outlined text-[14px]">check_circle</span>
-<span class="text-xs font-semibold">Healthy &amp; Balanced</span>
-</div>
-</div>
-<div class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high">
-<div class="flex justify-between items-center text-xs">
-<span class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span>
-<span class="font-semibold text-secondary">1 of 6 signs reported</span>
-</div>
-<div class="grid grid-cols-6 gap-1">
-<div class="h-1.5 rounded-full bg-secondary"></div>
-<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
-<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
-<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
-<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
-<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
-</div>
-<div class="flex flex-wrap gap-1.5 mt-1">
-<span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-secondary font-medium">✨ Post-menarche normal variation</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-0.5">
-<p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">
-          Encourage hydration &amp; supportive sports nutrition
-        </p>
-<div class="flex items-center gap-1.5 flex-shrink-0">
-<button class="px-3 py-1 rounded-full bg-secondary-fixed/60 hover:bg-secondary-fixed text-secondary text-xs font-semibold flex items-center gap-1 transition-all" type="button">
-            View Plan 💬
-          </button>
-<button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all" title="Send Gentle Nudge" type="button">
-<span class="text-sm">💌</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Empty Filter / Search State -->
-<div class="hidden bg-surface-container-lowest p-8 rounded-2xl shadow-xs border border-dashed border-outline-variant flex flex-col items-center justify-center text-center gap-3" id="no-results">
-<div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-primary text-2xl">
-        🌱
-      </div>
-<div class="flex flex-col">
-<p class="font-headline-sm text-base font-bold text-on-surface">No teen records match</p>
-<p class="text-xs text-on-surface-variant max-w-xs mt-1">Try clearing your filters or searching for another keyword or symptom.</p>
-</div>
-<button class="mt-1 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-xs shadow-sm hover:opacity-90 transition-opacity" id="reset-filter-btn" type="button">
-        Reset Search &amp; Filters
-      </button>
-</div>
-</section>
-<!-- Floating / Prominent Action to Initiate New Screening -->
-<div class="sticky bottom-20 z-40 flex justify-end w-full pr-1 pointer-events-none">
-<a class="pointer-events-auto flex items-center gap-2 h-12 px-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all" data-path="assessment" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span class="font-label-lg text-sm font-bold tracking-wide">+ New Self-Check</span></a>
-</div>
-</div>
-<script>
-  (function() {
-    const searchInput = document.getElementById('patient-search');
-    const clearBtn = document.getElementById('clear-search');
-    const filterButtons = document.querySelectorAll('.filter-chip');
-    const patientCards = document.querySelectorAll('.patient-card');
-    const noResults = document.getElementById('no-results');
-    const resetBtn = document.getElementById('reset-filter-btn');
 
-    let currentFilter = 'all';
-    let searchQuery = '';
+      body {
+        overscroll-behavior-y: none;
+      }
 
-    function applyFilters() {
-      let visibleCount = 0;
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
 
-      patientCards.forEach(card => {
-        const matchesFilter = (currentFilter === 'all') || (card.getAttribute('data-risk') === currentFilter);
-        const matchesSearch = card.getAttribute('data-name').toLowerCase().includes(searchQuery.toLowerCase().trim());
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
 
-        if (matchesFilter && matchesSearch) {
-          card.classList.remove('hidden');
-          visibleCount++;
-        } else {
-          card.classList.add('hidden');
-        }
-      });
+      main>:first-child {
+        margin-top: 0 !important;
+      }
 
-      if (visibleCount === 0) {
-        noResults.classList.remove('hidden');
-      } else {
-        noResults.classList.add('hidden');
+      main>:last-child {
+        margin-bottom: 0 !important;
       }
     }
 
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => {
-          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-xs');
-          b.classList.add('bg-surface-container-lowest');
-          if (b.dataset.filter === 'high') {
-            b.classList.add('text-tertiary');
-          } else if (b.dataset.filter === 'moderate') {
-            b.classList.add('text-primary');
-          } else if (b.dataset.filter === 'low') {
-            b.classList.add('text-secondary');
-          } else {
-            b.classList.add('text-on-surface-variant');
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'secondary-container': '#b8eeda',
+            'secondary-fixed': '#b8eeda',
+            'background': '#fbf7ff',
+            'secondary': '#2e6b5a',
+            'surface-container': '#f5eafd',
+            'on-secondary-fixed-variant': '#13473b',
+            'on-tertiary-fixed-variant': '#6f3441',
+            'surface-container-high': '#f0e6f9',
+            'on-secondary-container': '#265446',
+            'inverse-on-surface': '#f8edff',
+            'surface': '#fbf7ff',
+            'surface-dim': '#e1d6e9',
+            'on-primary-fixed-variant': '#4d3b7e',
+            'outline-variant': '#e5deee',
+            'on-primary-fixed': '#210a50',
+            'inverse-surface': '#342e3c',
+            'on-background': '#1f1926',
+            'tertiary-fixed': '#ffe0e4',
+            'tertiary-container': '#a35f6d',
+            'on-primary-container': '#fef8ff',
+            'on-tertiary': '#ffffff',
+            'primary': '#624f93',
+            'primary-fixed-dim': '#cfbcff',
+            'on-tertiary-container': '#fff8f8',
+            'surface-container-lowest': '#ffffff',
+            'error': '#ba1a1a',
+            'surface-container-low': '#faf0ff',
+            'outline': '#7a7581',
+            'on-tertiary-fixed': '#40111e',
+            'inverse-primary': '#cfbcff',
+            'surface-bright': '#fef7ff',
+            'surface-container-highest': '#e9dff2',
+            'on-secondary': '#ffffff',
+            'tertiary-fixed-dim': '#ffb2bf',
+            'primary-fixed': '#ede3ff',
+            'on-error': '#ffffff',
+            'surface-variant': '#eee4f5',
+            'on-error-container': '#93000a',
+            'error-container': '#ffdad6',
+            'tertiary': '#a24b5d',
+            'secondary-fixed-dim': '#9cd1be',
+            'on-secondary-fixed': '#002018',
+            'on-primary': '#ffffff',
+            'primary-container': '#7b68ae',
+            'on-surface-variant': '#595363',
+            'on-surface': '#201a27',
+            'surface-tint': '#665397'
+          },
+          borderRadius: {
+            'DEFAULT': '0.375rem',
+            'lg': '0.625rem',
+            'xl': '1rem',
+            '2xl': '1.25rem',
+            '3xl': '1.75rem',
+            'full': '9999px'
+          },
+          spacing: {
+            'gutter': '1rem',
+            'space-xs': '0.25rem',
+            'space-sm': '0.5rem',
+            'space-md': '1rem',
+            'space-lg': '1.5rem',
+            'space-xl': '2rem'
+          },
+          fontFamily: {
+            'headline-lg': ['Plus Jakarta Sans', 'sans-serif'],
+            'headline-md': ['Plus Jakarta Sans', 'sans-serif'],
+            'headline-sm': ['Plus Jakarta Sans', 'sans-serif'],
+            'headline-lg-mobile': ['Plus Jakarta Sans', 'sans-serif'],
+            'body-lg': ['Plus Jakarta Sans', 'sans-serif'],
+            'body-md': ['Plus Jakarta Sans', 'sans-serif'],
+            'body-sm': ['Plus Jakarta Sans', 'sans-serif'],
+            'label-lg': ['Inter', 'sans-serif'],
+            'label-md': ['Inter', 'sans-serif'],
+            'label-sm': ['Inter', 'sans-serif']
           }
+        }
+      }
+    };</script>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen antialiased">
+  <header
+    class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl border-b border-surface-container-high/60 shadow-[0_2px_12px_rgba(98,79,147,0.04)]">
+    <div class="h-16 px-gutter flex items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-sm min-w-0"><img alt="BloomTeen Health Logo"
+          class="h-9 w-auto object-contain flex-shrink-0 drop-shadow-sm"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1W6Jhu7-lToboyD7O3wpIiLf4M2dnHCaQkA8TP6l8aULBSR6RuOaUqW7eEG9GdsOPIYzuPZMG2KK3GkjPZVvRV9_q4pWIZaKdxQb6rtKqf1p2D4hDxYv4UM144XBDzajmGyzT187FbEjBwdjbfY5Kf5vlUR2X4AbCETsPvkTqtSi3_axocxsnOUd0We2_8yljPdkdaZG4BI76BhmFGBclsvR07cFUFR8u0gNmVUHua431Mf1E5J1NXWwQ">
+        <div class="flex flex-col min-w-0">
+          <div class="flex items-center gap-1.5"><span
+              class="font-headline-sm font-bold text-headline-sm text-on-surface truncate tracking-tight">BloomTeen</span><span
+              class="text-xs px-2 py-0.5 rounded-full font-semibold bg-secondary-fixed text-secondary flex items-center gap-1"><span
+                class="w-1.5 h-1.5 rounded-full bg-secondary"></span>PCOS &amp; PCOD Portal</span></div><span
+            class="font-label-sm text-label-sm text-on-surface-variant truncate">Adolescent Hormone &amp; Diagnostic
+            Registry</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 flex-shrink-0"><button aria-label="Support &amp; Resources"
+          class="w-10 h-10 flex items-center justify-center rounded-full text-primary bg-primary-fixed/40 hover:bg-primary-fixed active:scale-95 transition-all"
+          type="button"><span class="material-symbols-outlined text-[20px]">favorite</span></button>
+        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-primary to-primary-container p-0.5 shadow-sm">
+          <div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center"><span
+              class="material-symbols-outlined text-primary text-[20px]">spa</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="flex flex-col relative w-full pt-16 pb-28 bg-surface min-h-screen">
+    <div class="flex flex-col w-full px-gutter pb-space-xl gap-4">
+      <div
+        class="mt-3 bg-secondary-fixed/30 border border-secondary-fixed text-secondary px-3 py-2 rounded-xl flex items-center gap-2 text-xs">
+        <span class="material-symbols-outlined text-[18px] text-secondary flex-shrink-0">lock</span>
+        <div class="flex-1 min-w-0 leading-tight"><span class="font-bold">Doctor &amp; Care Team View</span> • HIPAA
+          &amp; COPPA Compliant Patient Records (Teens &amp; guardians consented for clinical PCOS/PCOD evaluation).
+        </div>
+      </div>
+      <!-- Friendly Welcome Hero Banner -->
+      <section
+        class="mt-3 bg-gradient-to-br from-primary-fixed/70 via-surface-container to-secondary-fixed/40 p-4 rounded-2xl border border-primary-fixed shadow-sm flex flex-col gap-3 relative overflow-hidden">
+        <div class="absolute -right-5 -bottom-6 text-primary/10 select-none pointer-events-none"><span
+            class="material-symbols-outlined text-[100px]">filter_vintage</span></div>
+        <div class="flex items-start justify-between relative z-10">
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5 mb-1 flex-wrap"><span
+                class="text-xs font-semibold px-2 py-0.5 rounded-full bg-surface-container-lowest/90 text-primary flex items-center gap-1 shadow-xs"><span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Clinician Space</span><span
+                class="text-xs font-semibold px-2 py-0.5 rounded-full bg-secondary-fixed text-secondary">Teal PCOS
+                Cohort</span><span class="text-xs text-on-surface-variant">Bloom Hub</span></div>
+            <h1 class="font-headline-md text-xl sm:text-2xl font-bold text-on-surface">Adolescent PCOS &amp; PCOD
+              Clinical Tracker</h1>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Managing <strong
+                class="text-primary font-semibold">28 teen patients</strong> under modified adolescent Rotterdam
+              diagnostic guidelines</p>
+          </div>
+          <div
+            class="w-11 h-11 rounded-2xl bg-surface-container-lowest/90 text-secondary flex items-center justify-center shadow-sm flex-shrink-0">
+            <span class="material-symbols-outlined text-[24px]">medical_services</span></div>
+        </div>
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-surface-container-lowest/90 backdrop-blur-sm px-3.5 py-2.5 rounded-xl text-xs relative z-10 border border-secondary-fixed/60 gap-1.5">
+          <div class="flex items-center gap-2"><span
+              class="material-symbols-outlined text-secondary text-[18px]">verified</span><span
+              class="font-medium text-on-surface">84% follow-ups completed on time • Labs &amp; ultrasound logs
+              up-to-date</span></div><span
+            class="font-semibold text-secondary bg-secondary-fixed/60 px-2 py-0.5 rounded-md self-start sm:self-auto">PCOS
+            Awareness Rhythm ✨</span>
+        </div>
+      </section>
+      <!-- Youthful Summary Cards Bento -->
+      <section class="grid grid-cols-3 gap-2.5">
+        <div
+          class="bg-surface-container-lowest p-3 rounded-2xl shadow-xs border border-tertiary-fixed flex flex-col justify-between gap-1.5 relative overflow-hidden">
+          <div class="flex items-center justify-between"><span
+              class="text-[11px] font-semibold text-tertiary uppercase tracking-wider">High Risk</span><span
+              class="w-2 h-2 rounded-full bg-tertiary"></span></div>
+          <div>
+            <div class="font-headline-md text-2xl font-bold text-on-surface leading-none">9</div><span
+              class="text-[11px] text-tertiary font-medium mt-0.5 block">PCOS / PCOD ≥5/6</span>
+          </div>
+          <div class="w-full h-1.5 bg-tertiary-fixed rounded-full overflow-hidden">
+            <div class="h-full bg-tertiary rounded-full" style="width: 32%"></div>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-3 rounded-2xl shadow-xs border border-primary-fixed flex flex-col justify-between gap-1.5 relative overflow-hidden">
+          <div class="flex items-center justify-between"><span
+              class="text-[11px] font-semibold text-primary uppercase tracking-wider">Moderate</span><span
+              class="w-2 h-2 rounded-full bg-primary-container"></span></div>
+          <div>
+            <div class="font-headline-md text-2xl font-bold text-on-surface leading-none">12</div><span
+              class="text-[11px] text-on-surface-variant font-medium mt-0.5 block">Monitoring 3-4/6</span>
+          </div>
+          <div class="w-full h-1.5 bg-primary-fixed rounded-full overflow-hidden">
+            <div class="h-full bg-primary-container rounded-full" style="width: 43%"></div>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-3 rounded-2xl shadow-xs border border-secondary-fixed flex flex-col justify-between gap-1.5 relative overflow-hidden">
+          <div class="flex items-center justify-between"><span
+              class="text-[11px] font-semibold text-secondary uppercase tracking-wider">Low / Mild</span><span
+              class="w-2 h-2 rounded-full bg-secondary"></span></div>
+          <div>
+            <div class="font-headline-md text-2xl font-bold text-on-surface leading-none">7</div><span
+              class="text-[11px] text-secondary font-medium mt-0.5 block">Balanced ≤2/6</span>
+          </div>
+          <div class="w-full h-1.5 bg-secondary-fixed rounded-full overflow-hidden">
+            <div class="h-full bg-secondary rounded-full" style="width: 25%"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Search & Filter Controls -->
+      <section class="flex flex-col gap-2 pt-1">
+        <!-- Search Field with Friendly UX -->
+        <div class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant/70 text-[20px]">search</span>
+          <input
+            class="w-full h-12 pl-10 pr-10 rounded-2xl bg-surface-container-lowest text-on-surface font-body-md text-body-sm placeholder:text-on-surface-variant/70 shadow-xs border border-outline-variant/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+            id="patient-search" placeholder="Search teen name, PCOS signs (amenorrhea, hirsutism, acne)... 🔍"
+            type="text">
+          <button aria-label="Clear Search"
+            class="hidden absolute right-3 text-on-surface-variant hover:text-on-surface" id="clear-search"
+            type="button">
+            <span class="material-symbols-outlined text-[18px]">cancel</span>
+          </button>
+        </div>
+        <!-- Horizontal Filter Chips -->
+        <div class="flex items-center gap-2 overflow-x-auto py-1 scrollbar-none" id="filter-chips">
+          <button
+            class="filter-chip active flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-xs font-semibold bg-primary text-on-primary shadow-xs transition-all"
+            data-filter="all" type="button">
+            All Teens (28)
+          </button>
+          <button
+            class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-xs font-medium bg-surface-container-lowest text-tertiary border border-tertiary-fixed hover:bg-tertiary-fixed/30 transition-all"
+            data-filter="high" type="button">
+            Needs Care (9)
+          </button>
+          <button
+            class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-xs font-medium bg-surface-container-lowest text-primary border border-primary-fixed hover:bg-primary-fixed/30 transition-all"
+            data-filter="moderate" type="button">
+            Monitoring (12)
+          </button>
+          <button
+            class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-xs font-medium bg-surface-container-lowest text-secondary border border-secondary-fixed hover:bg-secondary-fixed/30 transition-all"
+            data-filter="low" type="button">
+            Thriving (7)
+          </button>
+        </div>
+      </section>
+      <!-- Teen Empowerment Educational Card -->
+      <section
+        class="bg-gradient-to-r from-pink-50 via-purple-50 to-indigo-50 border border-pink-200/70 p-3.5 rounded-2xl flex items-center gap-3 shadow-xs">
+        <div
+          class="w-10 h-10 rounded-2xl bg-white text-secondary flex items-center justify-center flex-shrink-0 shadow-xs border border-secondary-fixed">
+          <span class="text-xl select-none">🎗️</span></div>
+        <div class="flex flex-col min-w-0">
+          <div class="flex items-center gap-1.5 flex-wrap"><span
+              class="font-label-md text-xs font-bold text-on-surface">Adolescent PCOS/PCOD Diagnostic
+              Protocol</span><span
+              class="text-[10px] bg-secondary-fixed text-secondary font-semibold px-1.5 py-0.2 rounded-md">Rotterdam
+              Consensus</span></div>
+          <p class="text-xs text-on-surface-variant leading-relaxed mt-0.5">Diagnosis in adolescents requires persistent
+            ovulatory dysfunction (&gt;2 yrs post-menarche) AND clinical or biochemical hyperandrogenism. Gentle,
+            supportive communication prevents distress.</p>
+        </div>
+      </section>
+      <!-- Patient Cards Section -->
+      <section class="flex flex-col gap-3" id="patient-list">
+        <!-- Patient 1: Ananya Patel (High Risk -> Priority Care Needed) -->
+        <article
+          class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-tertiary/40"
+          data-name="ananya patel irregular acne hirsutism" data-risk="high">
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-center gap-3 min-w-0">
+              <div
+                class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-pink-200 to-rose-100 text-tertiary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">
+                AP</div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Ananya Patel</h2><span
+                    class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant flex-shrink-0">Age
+                    17</span>
+                </div><span class="text-xs text-on-surface-variant/80 truncate">Assessed Today • 09:40 AM</span>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-rose-50 text-tertiary border border-rose-200/70 flex-shrink-0 shadow-xs">
+              <span class="material-symbols-outlined text-[14px]">warning</span><span
+                class="text-xs font-semibold whitespace-nowrap">High PCOS Risk (5/6)</span></div>
+          </div>
+          <div
+            class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high">
+            <div class="flex justify-between items-center text-xs"><span
+                class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span><span
+                class="font-semibold text-tertiary">5 of 6 signs reported</span></div>
+            <div class="grid grid-cols-6 gap-1">
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-1"><span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">✨
+                Cycle irregularity</span><span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌿
+                Hormonal acne</span><span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌸
+                Hirsutism</span></div>
+          </div>
+          <div class="bg-rose-50/70 border border-rose-200/70 rounded-xl p-2.5 flex items-start gap-2 text-xs"><span
+              class="material-symbols-outlined text-tertiary text-[16px] mt-0.5 flex-shrink-0">medical_services</span>
+            <div class="flex-1 min-w-0"><span class="font-bold text-tertiary block">Next Steps &amp; Guidance:</span>
+              <p class="text-on-surface-variant leading-relaxed">Pediatric endocrine lab work &amp; pelvic ultrasound
+                evaluation. Discuss gentle cycle regulation.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-0.5">
+            <p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">Pediatric endocrinology review
+              recommended</p>
+            <div class="flex items-center gap-1.5 flex-shrink-0"><button
+                class="px-3 py-1 rounded-full bg-primary-fixed/50 hover:bg-primary-fixed text-primary text-xs font-semibold flex items-center gap-1 transition-all"
+                type="button">View Plan 💬</button><button
+                class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all"
+                title="Send Gentle Nudge" type="button"><span class="text-sm">💌</span></button></div>
+          </div>
+        </article>
+        <!-- Patient 2: Chloe Bennett (Low Risk -> Healthy & Balanced) -->
+        <article
+          class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-secondary/40"
+          data-name="chloe bennett mild acne regular" data-risk="low">
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-center gap-3 min-w-0">
+              <div
+                class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-100 to-teal-200 text-secondary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">
+                CB</div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Chloe Bennett</h2><span
+                    class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant flex-shrink-0">Age
+                    15</span>
+                </div><span class="text-xs text-on-surface-variant/80 truncate">Assessed Today • 11:15 AM</span>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-secondary border border-emerald-200/70 flex-shrink-0 shadow-xs">
+              <span class="material-symbols-outlined text-[14px]">check_circle</span><span
+                class="text-xs font-semibold whitespace-nowrap">Low PCOS Risk (2/6)</span></div>
+          </div>
+          <div
+            class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high">
+            <div class="flex justify-between items-center text-xs"><span
+                class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span><span
+                class="font-semibold text-secondary">2 of 6 signs reported</span></div>
+            <div class="grid grid-cols-6 gap-1">
+              <div class="h-1.5 rounded-full bg-secondary"></div>
+              <div class="h-1.5 rounded-full bg-secondary"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-1"><span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌿
+                Mild skin changes</span><span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-secondary font-medium">✨ Routine regular
+                cycle</span></div>
+          </div>
+          <div class="bg-emerald-50/70 border border-emerald-200/70 rounded-xl p-2.5 flex items-start gap-2 text-xs">
+            <span class="material-symbols-outlined text-secondary text-[16px] mt-0.5 flex-shrink-0">spa</span>
+            <div class="flex-1 min-w-0"><span class="font-bold text-secondary block">Next Steps &amp; Guidance:</span>
+              <p class="text-on-surface-variant leading-relaxed">Routine annual check &amp; reassure about normal
+                pubertal cycle variation. Continue cycle log.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-0.5">
+            <p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">Stable profile. Reassure teen on natural
+              pubertal shifts.</p>
+            <div class="flex items-center gap-1.5 flex-shrink-0"><button
+                class="px-3 py-1 rounded-full bg-secondary-fixed/60 hover:bg-secondary-fixed text-secondary text-xs font-semibold flex items-center gap-1 transition-all"
+                type="button">View Plan 💬</button><button
+                class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all"
+                title="Send Gentle Nudge" type="button"><span class="text-sm">💌</span></button></div>
+          </div>
+        </article>
+        <!-- Patient 3: Sofia Ramirez (Moderate Risk -> Gentle Monitoring) -->
+        <article
+          class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-primary/40"
+          data-name="sofia ramirez weight changes dark patches skipped" data-risk="moderate">
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-center gap-3 min-w-0">
+              <div
+                class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-200 to-indigo-100 text-primary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">
+                SR</div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Sofia Ramirez</h2><span
+                    class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant flex-shrink-0">Age
+                    18</span>
+                </div><span class="text-xs text-on-surface-variant/80 truncate">Assessed Yesterday • 04:20 PM</span>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-purple-50 text-primary border border-purple-200/70 flex-shrink-0 shadow-xs">
+              <span class="material-symbols-outlined text-[14px]">visibility</span><span
+                class="text-xs font-semibold whitespace-nowrap">PCOS Monitoring (4/6)</span></div>
+          </div>
+          <div
+            class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high">
+            <div class="flex justify-between items-center text-xs"><span
+                class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span><span
+                class="font-semibold text-primary">4 of 6 signs reported</span></div>
+            <div class="grid grid-cols-6 gap-1">
+              <div class="h-1.5 rounded-full bg-primary-container"></div>
+              <div class="h-1.5 rounded-full bg-primary-container"></div>
+              <div class="h-1.5 rounded-full bg-primary-container"></div>
+              <div class="h-1.5 rounded-full bg-primary-container"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-1"><span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">✨
+                Acanthosis nigricans</span><span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌸
+                Skipped cycles</span></div>
+          </div>
+          <div class="bg-purple-50/70 border border-purple-200/70 rounded-xl p-2.5 flex items-start gap-2 text-xs"><span
+              class="material-symbols-outlined text-primary text-[16px] mt-0.5 flex-shrink-0">calendar_month</span>
+            <div class="flex-1 min-w-0"><span class="font-bold text-primary block">Next Steps &amp; Guidance:</span>
+              <p class="text-on-surface-variant leading-relaxed">3-month cycle tracking &amp; dietary insulin management
+                check-in. Gentle lifestyle support.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-0.5">
+            <p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">Nutritional counseling &amp; routine
+              insulin checkup</p>
+            <div class="flex items-center gap-1.5 flex-shrink-0"><button
+                class="px-3 py-1 rounded-full bg-primary-fixed/50 hover:bg-primary-fixed text-primary text-xs font-semibold flex items-center gap-1 transition-all"
+                type="button">View Plan 💬</button><button
+                class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all"
+                title="Send Gentle Nudge" type="button"><span class="text-sm">💌</span></button></div>
+          </div>
+        </article>
+        <!-- Patient 4: Zara Khan (High Risk -> Priority Care Needed) -->
+        <article
+          class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-tertiary/40"
+          data-name="zara khan amenorrhea hirsutism cystic acne" data-risk="high">
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-center gap-3 min-w-0">
+              <div
+                class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-100 to-pink-200 text-tertiary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">
+                ZK</div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Zara Khan</h2><span
+                    class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant flex-shrink-0">Age
+                    16</span>
+                </div><span class="text-xs text-on-surface-variant/80 truncate">Assessed Oct 14</span>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-rose-50 text-tertiary border border-rose-200/70 flex-shrink-0 shadow-xs">
+              <span class="material-symbols-outlined text-[14px]">favorite</span><span
+                class="text-xs font-semibold whitespace-nowrap">Priority Care Needed</span></div>
+          </div>
+          <div
+            class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high">
+            <div class="flex justify-between items-center text-xs"><span
+                class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span><span
+                class="font-semibold text-tertiary">6 of 6 signs reported</span></div>
+            <div class="grid grid-cols-6 gap-1">
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+              <div class="h-1.5 rounded-full bg-tertiary"></div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-1"><span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">✨
+                Primary amenorrhea</span><span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌿
+                Severe hirsutism</span></div>
+          </div>
+          <div class="bg-rose-50/70 border border-rose-200/70 rounded-xl p-2.5 flex items-start gap-2 text-xs"><span
+              class="material-symbols-outlined text-tertiary text-[16px] mt-0.5 flex-shrink-0">medical_services</span>
+            <div class="flex-1 min-w-0"><span class="font-bold text-tertiary block">Next Steps &amp; Guidance:</span>
+              <p class="text-on-surface-variant leading-relaxed">Pediatric gynecologist referral &amp; complete hormone
+                panel. Empathetic adolescent counseling.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-0.5">
+            <p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">Pediatric gynecologist referral and labs
+              scheduled</p>
+            <div class="flex items-center gap-1.5 flex-shrink-0"><button
+                class="px-3 py-1 rounded-full bg-primary-fixed/50 hover:bg-primary-fixed text-primary text-xs font-semibold flex items-center gap-1 transition-all"
+                type="button">View Plan 💬</button><button
+                class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all"
+                title="Send Gentle Nudge" type="button"><span class="text-sm">💌</span></button></div>
+          </div>
+        </article>
+        <!-- Patient 5: Emma Watson (Moderate Risk -> Gentle Monitoring) -->
+        <article
+          class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-primary/40"
+          data-name="emma watson scalp thinning sudden weight changes" data-risk="moderate">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0">
+              <!-- Fun Teen Pastel Avatar -->
+              <div
+                class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-100 to-indigo-100 text-primary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">
+                EW
+              </div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5">
+                  <h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Emma Watson</h2>
+                  <span
+                    class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Age
+                    14</span>
+                </div>
+                <span class="text-xs text-on-surface-variant/80">Assessed Oct 12</span>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-purple-50 text-primary border border-purple-200/70 flex-shrink-0 shadow-xs">
+              <span class="material-symbols-outlined text-[14px]">visibility</span>
+              <span class="text-xs font-semibold">Gentle Monitoring</span>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high">
+            <div class="flex justify-between items-center text-xs">
+              <span class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span>
+              <span class="font-semibold text-primary">3 of 6 signs reported</span>
+            </div>
+            <div class="grid grid-cols-6 gap-1">
+              <div class="h-1.5 rounded-full bg-primary-container"></div>
+              <div class="h-1.5 rounded-full bg-primary-container"></div>
+              <div class="h-1.5 rounded-full bg-primary-container"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-1">
+              <span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">✨
+                Hair thinning</span>
+              <span
+                class="text-[11px] px-2 py-0.5 rounded-md bg-white text-on-surface-variant border border-outline-variant/60 font-medium">🌿
+                Mild fatigue</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-0.5">
+            <p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">
+              3-month wellness journal &amp; sleep hygiene check
+            </p>
+            <div class="flex items-center gap-1.5 flex-shrink-0">
+              <button
+                class="px-3 py-1 rounded-full bg-primary-fixed/50 hover:bg-primary-fixed text-primary text-xs font-semibold flex items-center gap-1 transition-all"
+                type="button">
+                View Plan 💬
+              </button>
+              <button
+                class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all"
+                title="Send Gentle Nudge" type="button">
+                <span class="text-sm">💌</span>
+              </button>
+            </div>
+          </div>
+        </article>
+        <!-- Patient 6: Mia Takahashi (Low Risk -> Healthy & Balanced) -->
+        <article
+          class="patient-card bg-surface-container-lowest p-4 rounded-2xl shadow-xs border border-outline-variant/60 flex flex-col gap-3 transition-all hover:border-secondary/40"
+          data-name="mia takahashi occasional irregular menarche" data-risk="low">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0">
+              <!-- Fun Teen Pastel Avatar -->
+              <div
+                class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-teal-100 to-emerald-200 text-secondary flex items-center justify-center font-headline-sm font-bold text-sm shadow-inner flex-shrink-0 ring-2 ring-white">
+                MT
+              </div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5">
+                  <h2 class="font-headline-sm text-base font-bold text-on-surface truncate">Mia Takahashi</h2>
+                  <span
+                    class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Age
+                    16</span>
+                </div>
+                <span class="text-xs text-on-surface-variant/80">Assessed Oct 08</span>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-secondary border border-emerald-200/70 flex-shrink-0 shadow-xs">
+              <span class="material-symbols-outlined text-[14px]">check_circle</span>
+              <span class="text-xs font-semibold">Healthy &amp; Balanced</span>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-1.5 bg-surface-container-low/70 p-3 rounded-xl border border-surface-container-high">
+            <div class="flex justify-between items-center text-xs">
+              <span class="font-medium text-on-surface-variant">Signs &amp; Symptoms</span>
+              <span class="font-semibold text-secondary">1 of 6 signs reported</span>
+            </div>
+            <div class="grid grid-cols-6 gap-1">
+              <div class="h-1.5 rounded-full bg-secondary"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+              <div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-1">
+              <span class="text-[11px] px-2 py-0.5 rounded-md bg-white text-secondary font-medium">✨ Post-menarche
+                normal variation</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-0.5">
+            <p class="text-xs text-on-surface-variant line-clamp-1 flex-1 pr-2">
+              Encourage hydration &amp; supportive sports nutrition
+            </p>
+            <div class="flex items-center gap-1.5 flex-shrink-0">
+              <button
+                class="px-3 py-1 rounded-full bg-secondary-fixed/60 hover:bg-secondary-fixed text-secondary text-xs font-semibold flex items-center gap-1 transition-all"
+                type="button">
+                View Plan 💬
+              </button>
+              <button
+                class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-all"
+                title="Send Gentle Nudge" type="button">
+                <span class="text-sm">💌</span>
+              </button>
+            </div>
+          </div>
+        </article>
+        <!-- Empty Filter / Search State -->
+        <div
+          class="hidden bg-surface-container-lowest p-8 rounded-2xl shadow-xs border border-dashed border-outline-variant flex flex-col items-center justify-center text-center gap-3"
+          id="no-results">
+          <div
+            class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-primary text-2xl">
+            🌱
+          </div>
+          <div class="flex flex-col">
+            <p class="font-headline-sm text-base font-bold text-on-surface">No teen records match</p>
+            <p class="text-xs text-on-surface-variant max-w-xs mt-1">Try clearing your filters or searching for another
+              keyword or symptom.</p>
+          </div>
+          <button
+            class="mt-1 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-xs shadow-sm hover:opacity-90 transition-opacity"
+            id="reset-filter-btn" type="button">
+            Reset Search &amp; Filters
+          </button>
+        </div>
+      </section>
+      <!-- Floating / Prominent Action to Initiate New Screening -->
+      <div class="sticky bottom-20 z-40 flex justify-end w-full pr-1 pointer-events-none">
+        <a class="pointer-events-auto flex items-center gap-2 h-12 px-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all"
+          data-path="assessment" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span
+            class="font-label-lg text-sm font-bold tracking-wide">+ New Self-Check</span></a>
+      </div>
+    </div>
+    <script>
+      (function () {
+        const searchInput = document.getElementById('patient-search');
+        const clearBtn = document.getElementById('clear-search');
+        const filterButtons = document.querySelectorAll('.filter-chip');
+        const patientCards = document.querySelectorAll('.patient-card');
+        const noResults = document.getElementById('no-results');
+        const resetBtn = document.getElementById('reset-filter-btn');
+
+        let currentFilter = 'all';
+        let searchQuery = '';
+
+        function applyFilters() {
+          let visibleCount = 0;
+
+          patientCards.forEach(card => {
+            const matchesFilter = (currentFilter === 'all') || (card.getAttribute('data-risk') === currentFilter);
+            const matchesSearch = card.getAttribute('data-name').toLowerCase().includes(searchQuery.toLowerCase().trim());
+
+            if (matchesFilter && matchesSearch) {
+              card.classList.remove('hidden');
+              visibleCount++;
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+
+          if (visibleCount === 0) {
+            noResults.classList.remove('hidden');
+          } else {
+            noResults.classList.add('hidden');
+          }
+        }
+
+        filterButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterButtons.forEach(b => {
+              b.classList.remove('bg-primary', 'text-on-primary', 'shadow-xs');
+              b.classList.add('bg-surface-container-lowest');
+              if (b.dataset.filter === 'high') {
+                b.classList.add('text-tertiary');
+              } else if (b.dataset.filter === 'moderate') {
+                b.classList.add('text-primary');
+              } else if (b.dataset.filter === 'low') {
+                b.classList.add('text-secondary');
+              } else {
+                b.classList.add('text-on-surface-variant');
+              }
+            });
+
+            btn.classList.remove('bg-surface-container-lowest', 'text-tertiary', 'text-primary', 'text-secondary', 'text-on-surface-variant');
+            btn.classList.add('bg-primary', 'text-on-primary', 'shadow-xs');
+
+            currentFilter = btn.getAttribute('data-filter');
+            applyFilters();
+          });
         });
 
-        btn.classList.remove('bg-surface-container-lowest', 'text-tertiary', 'text-primary', 'text-secondary', 'text-on-surface-variant');
-        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-xs');
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          if (searchQuery.length > 0) {
+            clearBtn.classList.remove('hidden');
+          } else {
+            clearBtn.classList.add('hidden');
+          }
+          applyFilters();
+        });
 
-        currentFilter = btn.getAttribute('data-filter');
-        applyFilters();
-      });
-    });
+        clearBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearBtn.classList.add('hidden');
+          applyFilters();
+        });
 
-    searchInput.addEventListener('input', (e) => {
-      searchQuery = e.target.value;
-      if (searchQuery.length > 0) {
-        clearBtn.classList.remove('hidden');
-      } else {
-        clearBtn.classList.add('hidden');
-      }
-      applyFilters();
-    });
+        resetBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearBtn.classList.add('hidden');
+          currentFilter = 'all';
 
-    clearBtn.addEventListener('click', () => {
-      searchInput.value = '';
-      searchQuery = '';
-      clearBtn.classList.add('hidden');
-      applyFilters();
-    });
+          filterButtons.forEach(b => {
+            if (b.getAttribute('data-filter') === 'all') {
+              b.classList.add('bg-primary', 'text-on-primary', 'shadow-xs');
+              b.classList.remove('bg-surface-container-lowest');
+            } else {
+              b.classList.remove('bg-primary', 'text-on-primary', 'shadow-xs');
+              b.classList.add('bg-surface-container-lowest');
+            }
+          });
 
-    resetBtn.addEventListener('click', () => {
-      searchInput.value = '';
-      searchQuery = '';
-      clearBtn.classList.add('hidden');
-      currentFilter = 'all';
+          applyFilters();
+        });
+      })();
+      <!-- Self-Check Screen Markup -->
+      <div id="self-check-screen" class="screen-view">
+        <div class="header-section">
+          <h2>Step 1 of 2: Quick Check-In</h2>
+          <p>~ 2 mins</p>
+        </div>
 
-      filterButtons.forEach(b => {
-        if (b.getAttribute('data-filter') === 'all') {
-          b.classList.add('bg-primary', 'text-on-primary', 'shadow-xs');
-          b.classList.remove('bg-surface-container-lowest');
-        } else {
-          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-xs');
-          b.classList.add('bg-surface-container-lowest');
-        }
-      });
+        <div class="card about-you-card">
+          <h3>About You</h3>
+          <label>What should we call you? <span class="sub-text">(this name is totally free)</span></label>
+          <input type="text" placeholder="Maya, Sky, Alex, etc." class="text-input" />
 
-      applyFilters();
-    });
-  })();
-</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-white/95 backdrop-blur-xl border-t border-primary-fixed/60 shadow-[0_-4px_16px_rgba(112,79,191,0.06)]" data-active-classes="text-primary bg-primary-fixed font-label-md font-bold"><div class="flex justify-around items-center h-16 px-gutter max-w-md mx-auto"><a class="flex flex-col items-center justify-center w-28 h-12 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all gap-0.5" data-path="assessment" href="#"><span class="material-symbols-outlined text-[22px]">fact_check</span><span class="font-label-md text-xs font-medium">Self-Check</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-28 h-12 rounded-full transition-all gap-0.5 text-primary bg-primary-fixed/80 font-label-md font-bold shadow-xs" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">diversity_1</span><span class="font-label-md text-xs">Community</span></a></div></nav>
+          <label>Your Age <span class="badge">Adolescent Care (13-19)</span></label>
+          <div class="age-selector">
+            <button class="age-btn">13</button>
+            <button class="age-btn">14</button>
+            <button class="age-btn">15</button>
+            <button class="age-btn active">16</button>
+            <button class="age-btn">17</button>
+            <button class="age-btn">18</button>
+            <button class="age-btn">19</button>
+          </div>
+          <p class="note">Hormones are wildly changing during these years, and trust us, it is 100% normal.</p>
+        </div>
 
-</body></html>
+        <div class="card symptoms-card">
+          <p class="instruction">Tap each card below if you experience it <span class="counter">0 of 6 selected</span></p>
+
+          <div class="symptom-item">
+            <input type="checkbox" id="sym-1" />
+            <label for="sym-1">
+              <strong>Do you experience irregular or missed periods?</strong> <span class="tag cycle">Cycle</span>
+              <p class="desc">In teen language: Unpredictable timing, skipping months, or having cycles longer than 35 days apart.</p>
+            </label>
+          </div>
+
+          <div class="symptom-item">
+            <input type="checkbox" id="sym-2" />
+            <label for="sym-2">
+              <strong>Have you had sudden, unexplained weight gain?</strong> <span class="tag metabolic">Metabolism</span>
+              <p class="desc">In teen language: Feeling noticeable changes around your tummy or trouble managing weight despite your usual routines.</p>
+            </label>
+          </div>
+
+          <div class="symptom-item">
+            <input type="checkbox" id="sym-3" />
+            <label for="sym-3">
+              <strong>Do you have severe, persistent acne?</strong> <span class="tag skin">Skin</span>
+              <p class="desc">In teen language: Deep, stubborn breakouts on jawline, chin, chest, or back that everyday skincare products don't seem to help.</p>
+            </label>
+          </div>
+
+          <div class="symptom-item">
+            <input type="checkbox" id="sym-4" />
+            <label for="sym-4">
+              <strong>Have you noticed excessive facial or body hair growth?</strong> <span class="tag hair">Hair Pattern</span>
+              <p class="desc">In teen language: Coarser or thicker hair popping up on your face, upper lip, chest, stomach, or thighs (doctors call this hirsutism).</p>
+            </label>
+          </div>
+
+          <div class="symptom-item">
+            <input type="checkbox" id="sym-5" />
+            <label for="sym-5">
+              <strong>Have you noticed dark patches of skin around your neck or creases?</strong> <span class="tag skin-care">Skin Care</span>
+              <p class="desc">In teen language: Soft, velvety darkened areas around neck folds, underarms, or elbows (related to insulin resistance).</p>
+            </label>
+          </div>
+
+          <div class="symptom-item">
+            <input type="checkbox" id="sym-6" />
+            <label for="sym-6">
+              <strong>Are you experiencing noticeable hair thinning on your scalp?</strong> <span class="tag scalp">Scalp Care</span>
+              <p class="desc">In teen language: A widening part line, hair thinning significantly than when tied up, or extra hair coming out during brushing.</p>
+            </label>
+          </div>
+        </div>
+
+        <button class="cta-button">Calculate PCOS & PCOD Hormonal Risk</button>
+      </div>
+    </script>
+  </main>
+  <nav
+    class="fixed bottom-0 w-full z-50 pb-safe bg-white/95 backdrop-blur-xl border-t border-primary-fixed/60 shadow-[0_-4px_16px_rgba(112,79,191,0.06)]"
+    data-active-classes="text-primary bg-primary-fixed font-label-md font-bold">
+    <div class="flex justify-around items-center h-16 px-gutter max-w-md mx-auto"><a
+        class="flex flex-col items-center justify-center w-28 h-12 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all gap-0.5"
+        data-path="assessment" href="#"><span class="material-symbols-outlined text-[22px]">fact_check</span><span
+          class="font-label-md text-xs font-medium">Self-Check</span></a><a aria-current="page"
+        class="flex flex-col items-center justify-center w-28 h-12 rounded-full transition-all gap-0.5 text-primary bg-primary-fixed/80 font-label-md font-bold shadow-xs"
+        data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">diversity_1</span><span
+          class="font-label-md text-xs">Community</span></a></div>
+  </nav>
+
+</body>
+
+</html>
