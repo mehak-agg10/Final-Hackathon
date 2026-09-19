@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="on_surface">#201A27</color>
+    <color name="primary">#624F93</color>
+    <color name="primary_container">#7B68AE</color>
+    <color name="secondary">#2E6B5A</color>
+    <color name="surface">#FBF7FF</color>
+    <string name="app_name">BloomTeen PCOS</string>
+    <string name="portal_badge">PCOS &amp; PCOD Portal</string>
+    <string name="portal_subtitle">Adolescent Hormone &amp; Diagnostic Registry</string>
+    <style name="Theme.BloomTeenPcosAssessor" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#FBF7FF</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>
